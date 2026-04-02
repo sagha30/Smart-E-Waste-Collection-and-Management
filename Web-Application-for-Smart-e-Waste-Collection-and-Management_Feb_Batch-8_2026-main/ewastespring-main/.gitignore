@@ -1,0 +1,23 @@
+# Credentials and Secrets
+application.properties
+*.env
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Output
+/target/
+/build/
+/dist/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

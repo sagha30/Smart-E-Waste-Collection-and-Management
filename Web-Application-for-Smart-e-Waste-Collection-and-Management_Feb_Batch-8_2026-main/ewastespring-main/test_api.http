@@ -1,0 +1,36 @@
+### 1. Register a New User
+# Click "Send Request" below.
+# Check your REAL EMAIL (srisriyg2001@gmail.com) for the OTP code.
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "email": "srisriyg2001@gmail.com",
+  "password": "password123",
+  "name": "Test User",
+  "phone": "9876543210",
+  "city": "New York"
+}
+
+### 2. Verify OTP (Replace 1234 with your Email OTP)
+# Enter the OTP you received in the email below where 1234 is.
+POST http://localhost:8080/verify-otp?email=srisriyg2001@gmail.com&otp=1234
+
+### 3. Login
+# This will trigger another OTP to your email.
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "srisriyg2001@gmail.com",
+  "password": "password123"
+}
+
+### 4. Verify Login OTP (Replace 5678 with your new OTP)
+# Takes the OTP from step 3. Returns a LONG token.
+POST http://localhost:8080/verify-login-otp?email=srisriyg2001@gmail.com&otp=5678
+
+### 5. Access Protected Data (Past your Token below)
+# Copy the token from Step 4 response and paste it after "Bearer "
+GET http://localhost:8080/getallusers
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE

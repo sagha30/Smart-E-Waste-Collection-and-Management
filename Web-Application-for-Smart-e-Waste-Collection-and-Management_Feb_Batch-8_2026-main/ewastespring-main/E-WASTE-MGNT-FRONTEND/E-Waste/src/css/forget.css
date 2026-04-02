@@ -1,0 +1,118 @@
+/* Modern Forget Password CSS - Matching Login/Register Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-secondary {
+    background: transparent !important;
+}
+
+/* Container flex removed to prevent global layout issues. Use Bootstrap classes instead. */
+
+/* Glass Card */
+.z-depth-3 {
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.col-sm-12.rounded-right.bg-dark {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px !important;
+    box-shadow: var(--glass-shadow);
+    padding: 3rem !important;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Inputs */
+.form-control {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 30px;
+    color: var(--text-main) !important;
+    padding: 12px 20px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    background: #ffffff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3) !important;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* Typography */
+h2,
+h4 {
+    color: var(--text-main) !important;
+    text-shadow: none;
+}
+
+.text-white {
+    color: var(--text-main) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(16, 185, 129, 0.5);
+    color: #fff;
+}
+
+.btn-danger {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    border-radius: 50px;
+    padding: 10px 30px;
+    color: var(--text-muted);
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+/* Alert Styling */
+.swal2-popup {
+    background: #1a1a2e !important;
+    color: #fff !important;
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+    font-weight: 500;
+}
